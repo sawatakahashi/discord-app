@@ -27,7 +27,7 @@ const Search = () => {
     <div className="searchBox">
       <form className="search">
         <input type="search" placeholder="search" onChange={handleChange} />
-        <SearchIcon />
+        <SearchIcon className="icon" />
       </form>
       <div>
         {searchResults.map((channel) => {

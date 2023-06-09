@@ -8,22 +8,26 @@
   .chatHeaderLeft {
     padding-left: 15px;
 
+    @media (max-width: 393px) {
+      padding-left: 8px;
+    }
+
     .chatHashTag {
       color: #7b7c85;
       padding: 5px 3px 0 2px;
 
-      @media (max-width: 1284px) {
-        font-size: 25px;
-        padding-right: 10px;
+      @media (max-width: 393px) {
+        font-size: 15px;
+        padding-right: 5px;
       }
     }
 
     h3 {
       color: white;
 
-      @media (max-width: 1284px) {
-        padding-top: 60px;
-        font-size: 25px;
+      @media (max-width: 393px) {
+        padding-top: 10px;
+        font-size: 10px;
       }
     }
   }
@@ -35,13 +39,13 @@
     gap: 10px;
     color: #7b7c85;
 
-    @media (max-width: 1284px) {
-      padding: 60px 20px 0 20px;
+    @media (max-width: 393px) {
+      padding: 10px 10px 0 10px;
     }
 
     .chatHeaderIcon {
-      @media (max-width: 1284px) {
-        font-size: 25px;
+      @media (max-width: 393px) {
+        display: none;
       }
     }
 
@@ -57,6 +61,11 @@
         outline: none;
         color: white;
         border: none;
+
+        @media (max-width: 393px) {
+          width: 80px;
+          font-size: small;
+        }
       }
     }
 
@@ -70,6 +79,10 @@
 
     .MuiSvgIcon-root {
       cursor: pointer;
+
+      @media (max-width: 393px) {
+        font-size: 15px;
+      }
     }
   }
 }
