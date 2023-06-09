@@ -6,8 +6,8 @@
   height: 100vh;
 
 
-  @media (max-width: 600px) {
-    margin-left: -130px;
+  @media (max-width: 1284px) {
+    margin-left: -2px;
     }
 
   .chatMessage {
@@ -36,9 +36,8 @@
         font-size: large;
         width: 100%;
 
-        @media (max-width: 600px){
+        @media (max-width: 1284px){
           width: 120px;
-          font-size: small;
         }
       }
 
@@ -47,8 +46,8 @@
       }
     }
     .chat-input-icon{
-      @media (max-width: 600px){
-        font-size: 18px;
+      @media (max-width: 1284px){
+        font-size: 25px;
       }
     }
 
@@ -58,9 +57,9 @@
         cursor: pointer;
         padding: 3px;
 
-        @media (max-width: 600px){
-          font-size: 15px;
-          padding: 1px;
+        @media (max-width: 1284px){
+          font-size: 25px;
+          padding: 5px;
         }
       }
     }

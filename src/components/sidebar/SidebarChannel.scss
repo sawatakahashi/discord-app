@@ -14,14 +14,18 @@
       background-color: #33363d;
       border-radius: 7px;
     }
+
+    @media (max-width: 1284px){
+      margin-top: 20px;
+    }
   }
 
   .hashtag {
     font-size: 22px;
     padding-right: 8px;
 
-    @media (max-width: 600px) {
-      font-size: 12px;
+    @media (max-width: 1284px) {
+      font-size: 25px;
   }
   }
 }

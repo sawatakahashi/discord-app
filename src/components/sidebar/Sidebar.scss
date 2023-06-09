@@ -10,8 +10,8 @@
     background-color: #202225;
     padding: 7px 15px;
 
-    @media (max-width: 600px) {
-      padding: 3px;
+    @media (max-width: 1284px) {
+      padding: 50px 15px ;
     }
 
     .sidebarLeftTop {
@@ -19,14 +19,17 @@
     }
     .sidebarLeftBottom {
       margin: auto 0 10px 0;
-      font-size: 12px;
+      font-size: 25px;
       padding: 0;
       color: white;
       cursor: pointer;
-
-      @media (max-width: 600px) {
-        font-size: 5px;
+      
+      @media (max-width: 1284px) {
+        padding: 0;
+        margin: 0;
       }
+  
+
     }
 
     .serverIcon {
@@ -38,10 +41,6 @@
       position: relative;
       margin-top: 7px;
 
-      @media (max-width: 600px) {
-        width: 30px;
-        height: 30px;
-      }
       img {
         position: absolute;
         width: 55px;
@@ -49,9 +48,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @media (max-width: 600px) {
-          width: 30px;
-        }
       }
     }
   }
@@ -62,13 +58,14 @@
     position: relative;
     flex-grow: 1;
 
-    @media (max-width: 600px) {
-      flex: 0.3;
-      font-size: 14px;
+    @media (max-width: 1284px) {
+      margin-left: -1px;
+      padding: 50px 0 0 10px;
+      font-size: 25px;
     }
     .sidebarIcon {
-      @media (max-width: 600px) {
-        font-size: 15px;
+      @media (max-width: 1284px) {
+        font-size: 30px;
       }
     }
 
@@ -79,17 +76,13 @@
       justify-content: space-between;
       padding: 20px;
 
-      @media (max-width: 600px) {
-        padding: 10px;
+      @media (max-width: 1284px) {
+        padding: 20px 0 30px 10px;
       }
     }
 
     .channels {
       padding: 13px;
-
-      @media (max-width: 600px) {
-        padding: 10px;
-      }
 
       .channelsHeader {
         color: white;
@@ -98,16 +91,16 @@
         margin-top: 5px;
 
         .sidebarIcon {
-          @media (max-width: 600px) {
-            font-size: 12px;
+          @media (max-width: 1284px) {
+            font-size: 25px;
             padding: 0 3px;
           }
         }
         .addIcon {
           cursor: pointer;
 
-          @media (max-width: 600px) {
-            font-size: 15px;
+          @media (max-width: 1284px) {
+            font-size: 25px;
             margin-left: 10px;
           }
         }
@@ -121,8 +114,8 @@
       .sidebarIcon {
         cursor: pointer;
 
-        @media (max-width: 600px) {
-          font-size: 18px;
+        @media (max-width: 1284px) {
+          font-size: 30px;
         }
       }
     }
@@ -139,7 +132,7 @@
       padding-top: 10px;
       margin-left: -3px;
 
-      @media (max-width: 600px) {
+      @media (max-width: 1284px) {
         justify-content: flex-start;
         flex-wrap: wrap;
       }
@@ -152,17 +145,14 @@
           width: 50px;
           border-radius: 50%;
 
-          @media (max-width: 600px) {
-            width: 30px;
+          @media (max-width: 1284px) {
+            width: 45px;
           }
         }
 
         .accountName {
           margin-left: 5px;
 
-          @media (max-width: 600px) {
-            font-size: 5px;
-          }
           h4 {
             color: white;
             font-weight: 500;
@@ -179,9 +169,8 @@
         align-items: center;
         color: #686a6e;
 
-        @media (max-width: 600px) {
-          font-size: 10px;
-          margin-left: 30px;
+        @media (max-width: 1284px) {
+          margin-left: 40px;
         }
       }
     }

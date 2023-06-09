@@ -4,8 +4,8 @@
   margin-bottom: 20px;
   color: white;
 
-  @media (max-width: 600px) {
-    margin: 10px 0;
+  @media (max-width: 1284px) {
+    margin: 50px 0;
   }
 
   .messageInfo {
@@ -13,17 +13,6 @@
     flex-direction: column;
     justify-content: center;
     padding: 20px 20px 20px 10px;
-
-    @media (max-width: 600px) {
-      padding: 10px 10px 10px 5px;
-      font-size: 15px;
-    }
-  }
-
-  h4 {
-    @media (max-width: 600px) {
-      font-size: 12px;
-    }
   }
 
   .profileImg {
@@ -31,9 +20,10 @@
     border-radius: 50px;
     margin: 15px 10px 0px 10px;
 
-    @media (max-width: 600px) {
-      width: 33px;
-      margin-left: 15px;
+    @media (max-width: 1284px) {
+      width: 30px;
+      margin-left: 25px;
+      padding: 10px;
     }
   }
 
@@ -44,9 +34,8 @@
   .postImg {
     margin-top: 10px;
 
-    @media (max-width: 600px) {
-      width: 120px;
-      margin-top: 15px;
+    @media (max-width: 1284px) {
+      margin-top: 25px;
     }
   }
 
@@ -55,9 +44,8 @@
     margin-left: 20px;
     font-size: 16px;
 
-    @media (max-width: 600px) {
-      font-size: 10px;
-      margin-left: 15px;
+    @media (max-width: 1284px) {
+      margin-left: 30px;
     }
   }
 }
