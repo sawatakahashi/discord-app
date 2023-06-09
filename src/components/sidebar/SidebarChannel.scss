@@ -19,5 +19,9 @@
   .hashtag {
     font-size: 22px;
     padding-right: 8px;
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+  }
   }
 }

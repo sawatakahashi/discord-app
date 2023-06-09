@@ -31,10 +31,10 @@ const Message = ({ timeStamp, message, user, imageUrl }: Props) => {
             {new Date(timeStamp?.toDate()).toLocaleString()}
           </span>
         </h4>
-        <p>{message}</p>
         {imageUrl && (
           <img src={imageUrl} alt="" width="200" className="postImg" />
         )}
+        <p>{message}</p>
       </div>
     </div>
   );

@@ -20,9 +20,9 @@ const ChatHeader = (props: Props) => {
         </h3>
       </div>
       <div className="chatHeaderRight">
-        <NotificationsIcon />
-        <PushPinIcon />
-        <PeopleAltIcon />
+        <NotificationsIcon className="chatHeaderIcon" />
+        <PushPinIcon className="chatHeaderIcon" />
+        <PeopleAltIcon className="chatHeaderIcon" />
         <Search />
       </div>
     </div>

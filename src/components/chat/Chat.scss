@@ -5,6 +5,11 @@
   background-color: #36393f;
   height: 100vh;
 
+
+  @media (max-width: 600px) {
+    margin-left: -130px;
+    }
+
   .chatMessage {
     height: 100vh;
     overflow: scroll;
@@ -30,10 +35,20 @@
         color: white;
         font-size: large;
         width: 100%;
+
+        @media (max-width: 600px){
+          width: 120px;
+          font-size: small;
+        }
       }
 
       .send-btn {
         display: none;
+      }
+    }
+    .chat-input-icon{
+      @media (max-width: 600px){
+        font-size: 18px;
       }
     }
 
@@ -42,6 +57,11 @@
       .MuiSvgIcon-root {
         cursor: pointer;
         padding: 3px;
+
+        @media (max-width: 600px){
+          font-size: 15px;
+          padding: 1px;
+        }
       }
     }
   }

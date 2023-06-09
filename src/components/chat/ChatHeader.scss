@@ -1,56 +1,83 @@
 .chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+
+  .chatHeaderLeft {
+    padding-left: 15px;
+
+    .chatHashTag {
+      color: #7b7c85;
+      padding: 5px 3px 0 2px;
+
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
+    }
+
+    h3 {
+      color: white;
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .chatHeaderRight {
+    padding: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding-top: 10px;
+    gap: 10px;
+    color: #7b7c85;
 
-    .chatHeaderLeft {
-        padding-left: 15px;
-
-        .chatHashTag {
-            color: #7b7c85;
-            padding-right: 7px;
-        }
-
-        h3 {
-            color: white;
-        }
+    @media (max-width: 600px) {
+      padding: 5px 5px 0 5px;
+      gap: 0;
     }
 
-    .chatHeaderRight {
-        padding: 15px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #7b7c85;
-
-        .search {
-            display: flex;
-            align-items: center;
-            background-color: #494953;
-            padding: 3px;
-            border-radius: 3px;
-
-            input {
-                background: transparent;
-                outline: none;
-                color: white;
-                border: none;
-            }
-        }
-        
-        .search_btn {
-            background-color: #494953;
-        }
-
-        .send-btn {
-            display: none;
-        }
-        
-        .MuiSvgIcon-root {
-            cursor: pointer;
-        }
+    .chatHeaderIcon {
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
     }
-    
+
+    .search {
+      display: flex;
+      align-items: center;
+      background-color: #494953;
+      padding: 3px;
+      border-radius: 3px;
+
+      @media (max-width: 600px) {
+        width: 100px;
+        margin-left: 5px;
+      }
+
+      input {
+        background: transparent;
+        outline: none;
+        color: white;
+        border: none;
+
+        @media (max-width: 600px) {
+          font-size: small;
+        }
+      }
+    }
+
+    .search_btn {
+      background-color: #494953;
+    }
+
+    .send-btn {
+      display: none;
+    }
+
+    .MuiSvgIcon-root {
+      cursor: pointer;
+    }
+  }
 }

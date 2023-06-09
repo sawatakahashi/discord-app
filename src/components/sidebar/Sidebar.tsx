@@ -43,13 +43,15 @@ const Sidebar = () => {
             <img src="./discord-icon.png" alt="" />
           </div>
         </div>
-        <div className="sidebarLeftBottom" onClick={() => auth.signOut()} >Logout</div>
+        <div className="sidebarLeftBottom" onClick={() => auth.signOut()}>
+          Out
+        </div>
       </div>
       {/* right */}
       <div className="sidebarRight">
         <div className="sidebarTop">
           <h3>Discord</h3>
-          <ExpandMoreIcon />
+          <ExpandMoreIcon className="sidebarIcon" />
         </div>
 
         {/* channels */}
@@ -62,7 +64,7 @@ const Sidebar = () => {
               />
               <h4>Programming Channel</h4>
             </div>
-            <AddIcon className="sidebarIcon" onClick={() => addChannel()} />
+            <AddIcon className="addIcon" onClick={() => addChannel()} />
           </div>
 
           <div
@@ -88,9 +90,9 @@ const Sidebar = () => {
             </div>
 
             <div className="voice">
-              <MicIcon />
-              <HeadphonesIcon />
-              <SettingsIcon />
+              <MicIcon className="sidebarIcon" />
+              <HeadphonesIcon className="sidebarIcon" />
+              <SettingsIcon className="sidebarIcon" />
             </div>
           </div>
         </div>

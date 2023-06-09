@@ -94,7 +94,7 @@ const Chat = () => {
 
       {/* chatInput */}
       <div className="chatInput">
-        <LibraryAddIcon />
+        <LibraryAddIcon className="chat-input-icon" />
         <form onSubmit={sendMessage}>
           <input
             type="text"
