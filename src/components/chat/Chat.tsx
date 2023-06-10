@@ -114,7 +114,7 @@ const Chat = () => {
         <form onSubmit={sendMessage}>
           <input
             type="text"
-            placeholder="send a message"
+            placeholder="message"
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setPutMessage(e.target.value)
             }

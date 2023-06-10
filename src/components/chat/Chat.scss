@@ -26,8 +26,8 @@
     color: #9ea0a3;
 
     @media (max-width: 393px) {
-      width: 175px;
-      margin: 10px;
+      width: 165px;
+      margin-left: 20px;
     }
 
     form {
@@ -43,7 +43,7 @@
         width: 100%;
 
         @media (max-width: 393px) {
-          width: 150px;
+          width: 140px;
           height: 10px;
           padding: 0;
           font-size: small;
