@@ -1,16 +1,15 @@
-import React, { useState,FormEventHandler } from "react";
+import React, { useState, FormEventHandler, useEffect } from "react";
 import "./Chat.scss";
 import ChatHeader from "./ChatHeader";
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
-import AddIcon from "@mui/icons-material/Add";
 import GifIcon from "@mui/icons-material/Gif";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import Message from "./Message";
 import { useAppSelector } from "../../app/hooks";
 import {
   addDoc,
-
   collection,
   CollectionReference,
   DocumentData,
@@ -33,7 +32,24 @@ const Chat = () => {
   const channelName = useAppSelector((state) => state.channel.channelName);
   const user = useAppSelector((state) => state.user.user);
   const { subDocuments: messages } = useSubCollection("channels", "messages");
-  const messagesCollection = collection(db, "messages");
+
+  
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth); // Track window width
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(window.innerWidth <= 393);
+  const [isAccordionVisible, setIsAccordionVisible] = useState<boolean>(false);
+
+  const updateWindowWidth = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
+    setIsSmallScreen(width <= 393);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateWindowWidth); // Update window width on resize
+    return () => {
+      window.removeEventListener("resize", updateWindowWidth); // Clean up event listener
+    };
+  }, []);
 
   const OnFileUploadToFirebase = async (
     e: React.ChangeEvent<HTMLInputElement>
@@ -94,11 +110,11 @@ const Chat = () => {
 
       {/* chatInput */}
       <div className="chatInput">
-        <LibraryAddIcon className="chat-input-icon" />
+        {!isSmallScreen && <LibraryAddIcon className="chatIcon" />}
         <form onSubmit={sendMessage}>
           <input
             type="text"
-            placeholder="send message"
+            placeholder="send a message"
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setPutMessage(e.target.value)
             }
@@ -112,11 +128,14 @@ const Chat = () => {
           {/* ボタンはEnterで操作できる */}
         </form>
 
-        <div className="chat-input-icons">
-          <div className="chat-input-icon">
-            <label htmlFor="file-input">
-              <AddIcon />
-            </label>
+        <div className="chatIcons">
+            {isSmallScreen && (
+              <span className="comma" onClick={() => setIsAccordionVisible(!isAccordionVisible)}>
+                ：
+              </span>
+            )}
+          <label htmlFor="file-input">
+            <CameraAltIcon className="cameraIcon" />
             <input
               id="file-input"
               type="file"
@@ -126,16 +145,21 @@ const Chat = () => {
               style={{ display: "none" }}
               onChange={OnFileUploadToFirebase}
             />
-          </div>
-          <div className="chat-input-icon">
-            <CardGiftcardIcon />
-          </div>
-          <div className="chat-input-icon">
-            <GifIcon />
-          </div>
-          <div className="chat-input-icon">
-            <SentimentSatisfiedAltIcon />
-          </div>
+          </label>
+          {!isSmallScreen && 
+          <div className="accordion-pc">
+              <CardGiftcardIcon className="chatIcon" />
+              <GifIcon className="chatIcon" />
+              <SentimentSatisfiedAltIcon className="chatIcon" />
+            </div>
+            }
+          {isAccordionVisible && (
+            <div className="accordion">
+              <CardGiftcardIcon className="chatIcon" />
+              <GifIcon className="chatIcon" />
+              <SentimentSatisfiedAltIcon className="chatIcon" />
+            </div>
+          )}
         </div>
       </div>
     </div>

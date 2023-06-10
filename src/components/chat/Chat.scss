@@ -7,9 +7,6 @@
 
   @media (max-width: 393px) {
     width: 200px;
-  }
-
-  @media (max-width: 393px) {
     margin-left: -160px;
   }
 
@@ -28,8 +25,14 @@
     margin: 20px;
     color: #9ea0a3;
 
+    @media (max-width: 393px) {
+      width: 175px;
+      margin: 10px;
+    }
+
     form {
       flex-grow: 1;
+
       input {
         padding: 15px;
         background: transparent;
@@ -52,17 +55,42 @@
       }
     }
 
-
-    .chat-input-icons {
+    .chatIcons {
       display: flex;
+      justify-content: center;
+      text-align: center;
+
       .MuiSvgIcon-root {
         cursor: pointer;
         padding: 3px;
       }
-    }
-    .chat-input-icon {
-      @media (max-width: 393px) {
-        display: none;
+
+      .comma {
+        cursor: pointer;
+
+        @media (max-width: 393px) {
+          font-size: 15px;
+          margin-top: 15px;
+        }
+      }
+      label {
+        .cameraIcon {
+          @media (max-width: 393px) {
+            margin: 10px 0 0 -55px;
+            font-size: 19px;
+          }
+        }
+      }
+
+      .accordion-pc {
+        @media (max-width: 393px) {
+          display: none;
+        }
+      }
+      .accordion {
+        @media (max-width: 393px) {
+          margin: -43px 0 0 -100px;
+        }
       }
     }
   }
