@@ -15,38 +15,38 @@ function App() {
 
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    auth.onAuthStateChanged((loginUser) => {
-      console.log(loginUser);
-      if (loginUser) {
-        dispatch(
-          login({
-            uid: loginUser.uid,
-            photo: loginUser.photoURL,
-            email: loginUser.email,
-            displayName: loginUser.displayName,
-          })
-        );
-      } else {
-        dispatch(logout());
-      }
-    });
-  }, [dispatch]);
+  // useEffect(() => {
+  //   auth.onAuthStateChanged((loginUser) => {
+  //     console.log(loginUser);
+  //     if (loginUser) {
+  //       dispatch(
+  //         login({
+  //           uid: loginUser.uid,
+  //           photo: loginUser.photoURL,
+  //           email: loginUser.email,
+  //           displayName: loginUser.displayName,
+  //         })
+  //       );
+  //     } else {
+  //       dispatch(logout());
+  //     }
+  //   });
+  // }, [dispatch]);
 
   return (
     <div className="App">
-      {user ? (
-        <>
+      {/* {user ? (
+        <> */}
           <ErrorBoundary FallbackComponent={ErrorFallBack}>
             <Sidebar />
           </ErrorBoundary>
           <Chat />
-        </>
+        {/* </>
       ) : (
         <>
           <Login />
         </>
-      )}
+      )} */}
     </div>
   );
 }
