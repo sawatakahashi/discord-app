@@ -10,6 +10,7 @@ import { auth, db } from "../../firebase";
 import { useAppSelector } from "../../app/hooks";
 import useCollection from "../../hooks/useCollection";
 import { addDoc, collection } from "firebase/firestore";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const Sidebar = () => {
   const user = useAppSelector((state) => state.user.user);
@@ -82,10 +83,14 @@ const Sidebar = () => {
 
           <div className="footer">
             <div className="account">
-              <img src={user?.photo} alt="" />
+            {user?.photo ? (
+              <img src={user?.photo}  alt="" />
+              ) : (
+                <AccountCircleIcon className="noPicture" />
+              )}
               <div className="accountName">
-                <h4>{user?.displayName}</h4>
-                <span>#{user?.uid.substring(0, 4)}</span>
+                <h4>{user?.displayName || "No Name"}</h4>
+                <span>#{user?.uid.substring(0, 4) || "12345"}</span>
               </div>
             </div>
 
